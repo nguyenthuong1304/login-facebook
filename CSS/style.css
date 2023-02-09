@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+#login_reg_separator {
+    display: none;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f0f2f5;
@@ -195,4 +199,111 @@ footer ol li a:hover {
 
 footer small {
     font-size: 11px;
+}
+
+@media only screen and (max-width: 768px) {
+    .row {
+        display: block;
+        top: 35%;
+    }
+
+    .row .col-logo {
+        display: flex;
+        width: 112px;
+        margin: 0 auto;
+    }
+
+    .row .col-logo h2{
+        display: none;
+    }
+
+    .col-form .form-container {
+        background-color: transparent;
+        border: none;
+        border-radius: 8px;
+        box-shadow: none;
+    }
+
+    ._8qtf {
+        margin: 0 0 4px 0;
+        width: 100%;
+    }
+    ._43mg {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    ._43mg>span {
+        display: inline-block;
+        position: relative;
+        font-size: 13px;
+    }
+    
+    ._43mh {
+        color: #4b4f56;
+    }
+    ._43mg {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    ._43mg>span:before {
+        margin-right: 15px;
+        right: 100%;
+    }
+    ._43mg>span:before, ._43mg>span:after {
+        background: #ccd0d5;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+    }
+
+    ._43mg>span:after {
+        left: 100%;
+        margin-left: 15px;
+    }
+    ._43mg>span:before, ._43mg>span:after {
+        background: #ccd0d5;
+        content: '';
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+    }
+
+    .col-form .form-container a {
+        border-bottom: none;
+        padding: 10px;
+    }
+
+    .btn-new {
+        background: white !important;
+        border-color: #bec3c9 !important;
+        border-style: solid !important;
+        border-width: 1px !important;
+        box-shadow: none !important;
+        color: #000 !important;
+        display: inline-block !important;
+        flex: none !important;
+        font-size: 15px !important;
+        font-style: normal !important;
+        font-weight: 500 !important;
+        letter-spacing: -0.23px !important;
+        text-align: center !important;
+        text-shadow: none !important;
+        white-space: nowrap !important;
+        width: 80% !important;
+        line-height: 35px !important;
+        margin-top: 10px !important;
+    }
+
+    #texttt {
+        display: none;
+    }
 }

